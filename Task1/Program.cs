@@ -26,9 +26,9 @@ void FillArray(int[] NewArray)
 }
 void WriteArray(int[] NewArray)
 {
-    for (int i = 0; i <NewArray.Length; i++)
+    for (int i = 0; i < NewArray.Length; i++)
     {
-       Console.Write($"{NewArray[i]} | ");
+        Console.Write($"{NewArray[i]} | ");
     }
 }
 int WriteMinNumber(int[] NewArray)
@@ -36,32 +36,31 @@ int WriteMinNumber(int[] NewArray)
     int min = int.MaxValue;
     foreach (int ElementMin in NewArray)
     {
-        if (ElementMin < min) 
+        if (ElementMin < min)
         {
-          min= ElementMin;
+            min = ElementMin;
         }
     }
-        Console.Write($"Минимальное число массива {min} ");
-        return min;     
+    //Console.Write($"Минимальное число массива {min} ");
+    return min;
 }
 int WriteMaxNumber(int[] NewArray)
 {
     int max = int.MinValue;
     foreach (int ElementMax in NewArray)
     {
-        if (ElementMax > max) 
+        if (ElementMax > max)
         {
-          max= ElementMax;
+            max = ElementMax;
         }
     }
-        Console.WriteLine($"Максимальное число массива {max}  ");
-        return max;
+    //Console.WriteLine($"Максимальное число массива {max}  ");
+    return max;
 }
 void DifferenceNumber(int[] NewArray)
 {
     int Dif = WriteMaxNumber(array) - WriteMinNumber(array);
-    //int Dif = WriteMaxNumber(array) - WriteMinNumber(array);
-    Console.Write($"  //   {WriteMaxNumber(array)} - {WriteMinNumber(array)} = {Dif} ");
+    Console.WriteLine($"{WriteMaxNumber(array)} - {WriteMinNumber(array)} = {Dif} ");
 }
 
 
